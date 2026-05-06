@@ -217,9 +217,7 @@
       .header { padding: 18px 16px 0; }
       .page-title { font-size: 19px; }
       .tab-btn { padding: 8px 14px; font-size: 11px; }
-    }
-    @media (max-width: 480px) {
-      .comp-grid { grid-template-columns: 1fr 1fr; }
+      .card { padding: 18px 16px; }
     }
 
     canvas { max-height: 300px; }
@@ -278,6 +276,85 @@
       .legend-desc { display: none; }
       .ctx-stats { gap: 14px; }
       .ctx-stat-val { font-size: 16px; }
+    }
+
+    /* ── 480px — phones portrait (most iPhones, Android) ── */
+    @media (max-width: 480px) {
+      /* Layout */
+      .body { padding: 12px 10px 40px; }
+      .header { padding: 14px 12px 0; }
+      .page-title { font-size: 17px; }
+      .page-sub { font-size: 10.5px; }
+
+      /* Tabs — fill full width, hide subtitles */
+      .tab-bar { gap: 2px; }
+      .tab-btn { flex: 1; padding: 7px 6px; font-size: 10px; min-width: 0; }
+      .tsub { display: none; }
+      .tab-code { width: 18px; height: 14px; font-size: 8px; margin-right: 3px; }
+
+      /* Cards */
+      .card { padding: 14px 12px; border-radius: 12px; }
+      .card-title { font-size: 13px; }
+      .card-sub { font-size: 10.5px; margin-bottom: 14px; }
+
+      /* KPI cards */
+      .kpi-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+      .kpi-card { padding: 12px 10px; gap: 8px; border-radius: 10px; }
+      .kpi-icon { width: 30px; height: 30px; font-size: 13px; border-radius: 8px; }
+      .kpi-value { font-size: 18px; }
+      .kpi-label { font-size: 8.5px; }
+      .kpi-sub { font-size: 10px; }
+
+      /* Campaign context banner — wrap so stats drop below */
+      .ctx-banner { flex-wrap: wrap; padding: 14px 14px; gap: 10px; }
+      .ctx-badge { width: 40px; height: 40px; font-size: 17px; border-radius: 10px; }
+      .ctx-body { flex: 1; min-width: 0; }
+      .ctx-title { font-size: 14px; }
+      .ctx-stats {
+        width: 100%; padding-top: 10px;
+        border-top: 1px solid rgba(255,255,255,0.2);
+        gap: 16px;
+      }
+      .ctx-stat-val { font-size: 15px; }
+      .ctx-pill { font-size: 9px; padding: 3px 8px; }
+
+      /* Legend pills */
+      .legend-bar { gap: 6px; margin-top: 8px; }
+      .legend-pill { font-size: 10px; padding: 4px 8px; }
+
+      /* Charts — shorter on small screens */
+      canvas { max-height: 200px; }
+
+      /* Tables */
+      .tbl { font-size: 11px; }
+      .tbl th { padding: 6px 8px; font-size: 9px; }
+      .tbl td { padding: 7px 8px; }
+
+      /* Compare KPI grid */
+      .kpi-full-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+      .kfi-num { font-size: 15px; }
+
+      /* Verdict */
+      .verdict-card { padding: 16px; }
+      .verdict-icon { font-size: 18px; }
+      .verdict-title { font-size: 12px; }
+      .verdict-body { font-size: 11px; }
+
+      /* Compare banner stats */
+      .cmp-banner-stat-val { font-size: 18px; }
+      .cmp-banner-stats { gap: 12px; flex-wrap: wrap; }
+      .cmp-banner-side { padding: 16px; }
+    }
+
+    /* ── 360px — small Android phones ── */
+    @media (max-width: 360px) {
+      .body { padding: 10px 8px 40px; }
+      .page-title { font-size: 15px; }
+      .tab-btn { font-size: 9.5px; padding: 6px 4px; }
+      .kpi-value { font-size: 16px; }
+      .kpi-grid { gap: 6px; }
+      .kpi-card { padding: 10px 8px; gap: 6px; }
+      canvas { max-height: 180px; }
     }
   </style>
 </head>
